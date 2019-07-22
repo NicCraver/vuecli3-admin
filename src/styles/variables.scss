@@ -1,0 +1,38 @@
+// sidebar
+// $subMenuActiveText:rgba(0, 0, 0, .65);
+// //菜单背景
+// $menuBg:#fff;
+// //菜单字体颜色
+// $menuText:#bfcbd9;
+// //选中菜单颜色
+// $menuActiveText:#409EFF;
+// //下拉菜单Hover背景
+// $menuHover:#263445;
+// //子菜单背景
+// $subMenuBg:#1f2d3d;
+// //子菜单Hover背景
+// $subMenuHover:#001528;
+
+$menuBg:rgb(37,46,66);
+$menuText:#909399;
+$menuActiveText:rgb(255,255,255);
+$subMenuActiveText:rgb(255,255,255);
+$menuHover:rgb(49,57,77);
+$subMenuBg:rgb(37,46,66);
+$subMenuHover:rgb(49,57,77);
+
+
+$sideBarWidth: 210px;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+}
