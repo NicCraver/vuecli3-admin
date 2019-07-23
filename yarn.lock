@@ -7629,18 +7629,6 @@ vary@~1.1.2:
   resolved "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
-vconsole-webpack-plugin@^1.4.0:
-  version "1.4.2"
-  resolved "https://registry.npmjs.org/vconsole-webpack-plugin/-/vconsole-webpack-plugin-1.4.2.tgz#838346f70dc68c0dbd0c85ef88e625575f2b9a2d"
-  integrity sha512-D8yDM9IXeHEqm3E4B/0FAl6JT1mg9LiX7XXM9YtMV+s3otbyzrCTXR/jOwI6TNiyoN61j4VNl0v1wnBaJUJg9A==
-  dependencies:
-    vconsole "^3.1.0"
-
-vconsole@^3.1.0:
-  version "3.3.2"
-  resolved "https://registry.npmjs.org/vconsole/-/vconsole-3.3.2.tgz#07424f8de2e5e2586c504042093948435ed2de06"
-  integrity sha512-d5f6/q0U62Ojv5P7ROZy9TYP9te51v3QsuhNT0yZ0lZ+kN4R4rhYMpW5Y3FvYOerAhKkcnweiXQIZoKkziZEKg==
-
 vendors@^1.0.0:
   version "1.0.3"
   resolved "https://registry.npmjs.org/vendors/-/vendors-1.0.3.tgz#a6467781abd366217c050f8202e7e50cc9eef8c0"
@@ -7659,13 +7647,6 @@ vm-browserify@^1.0.1:
   version "1.1.0"
   resolved "https://registry.npmjs.org/vm-browserify/-/vm-browserify-1.1.0.tgz#bd76d6a23323e2ca8ffa12028dc04559c75f9019"
   integrity sha512-iq+S7vZJE60yejDYM0ek6zg308+UZsdtPExWP9VZoCFCz1zkJoXFnAX7aZfd/ZwrkidzdUZL0C/ryW+JwAiIGw==
-
-vue-cli-plugin-vconsole@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/vue-cli-plugin-vconsole/-/vue-cli-plugin-vconsole-1.0.1.tgz#7f039a61557f98e2d7aba5f7dcbeab2b26308b71"
-  integrity sha512-Fw2aCkV7fkxtD5dTCjV78GQHaPcbv1rsYjqmQIucY7RkuB9/mZES82EjMkCQ4SdEjFPQPpoj7/WajHOEta9cxg==
-  dependencies:
-    vconsole-webpack-plugin "^1.4.0"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.3"
