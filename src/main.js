@@ -10,10 +10,6 @@ import "@/styles/index.scss"; //引入全局样式
 import "element-ui/lib/theme-chalk/index.css";//引入element-ui样式
 import "./promission";//引入登录拦截js（可控制权限信息，及动态路由）
 
-// import Vconsole from 'vconsole'
-// let vConsole = new Vconsole()
-// Vue.use(vConsole)
-
 import PageHeader from '@/components/PageHeader/index.js'//引用全局组件PageHeader
 Vue.use(PageHeader);//使用全局组件PageHeader
 

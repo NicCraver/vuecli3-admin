@@ -1,4 +1,3 @@
-const vConsolePlugin = require('vconsole-webpack-plugin')
 module.exports = {
     //基本路径
     //baseUrl: './',//vue-cli3.3以下版本使用
@@ -13,19 +12,10 @@ module.exports = {
     productionSourceMap: false,
     //调整 webpack 配置
     configureWebpack: config => {
-        //生产环境去掉vconsole调试器
-        let envFlag = process.env.NODE_ENV != 'production'
-        // let pluginsDev = [
-        //     new vConsolePlugin({
-        //         filter: [],
-        //         enable: envFlag
-        //     })
-        // ]
         if (process.env.NODE_ENV === 'production') { // 为生产环境修改配置...process.env.NODE_ENV !== 'development'
             config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true
         } else {
             // 为开发环境修改配置...
-            // config.plugins = [...config.plugins, ...pluginsDev];
         }
     },
     // webpack-dev-server 相关配置 https://webpack.js.org/configuration/dev-server/
