@@ -1,6 +1,7 @@
 <template>
   <div>
-    <el-button type="primary" @click="go">跳转子页面</el-button>
+    <PageHeader title="demo4" />
+    <el-alert title="menu1-demo4，跳转演示" type="success">
     </el-alert>
   </div>
 </template>
@@ -14,11 +15,7 @@ export default {
   },
   created() {},
   mounted() {},
-  methods: {
-    go() {
-      this.$router.push("/menu1/doem4");
-    }
-  },
+  methods: {},
   watch: {},
   computed: {}
 };

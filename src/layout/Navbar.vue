@@ -19,7 +19,7 @@
       </el-dropdown>
     </div>
     <div class="navbar_tag">
-      <span class="navbar_tags" v-for="(v,index) in pathArr" v-if="v.hidden != 'true'">
+      <span class="navbar_tags" v-for="(v,index) in pathArr" v-if="v.hidden != true">
         <el-tag v-if="v.title==getTitle" @click="goToPage(v.path)" effect="dark" style="line-height: 25px;height: 25px;">
           {{v.title}}
         </el-tag>

@@ -63,6 +63,13 @@ export const constantRoutes = [
         component: () => import('@/views/menu1/demo3.vue'),
         meta: { title: 'Menu1Doem3' }
       },
+      {
+        path: 'doem4',
+        name: 'Menu1Doem4',
+        component: () => import('@/views/menu1/demo4.vue'),
+        meta: { title: 'Menu1Doem4', hidden: true },
+        hidden: true
+      }
     ]
   },
   {

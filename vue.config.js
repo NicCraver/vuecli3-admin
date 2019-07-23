@@ -15,17 +15,17 @@ module.exports = {
     configureWebpack: config => {
         //生产环境去掉vconsole调试器
         let envFlag = process.env.NODE_ENV != 'production'
-        let pluginsDev = [
-            new vConsolePlugin({
-                filter: [],
-                enable: envFlag
-            })
-        ]
+        // let pluginsDev = [
+        //     new vConsolePlugin({
+        //         filter: [],
+        //         enable: envFlag
+        //     })
+        // ]
         if (process.env.NODE_ENV === 'production') { // 为生产环境修改配置...process.env.NODE_ENV !== 'development'
             config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true
         } else {
             // 为开发环境修改配置...
-            config.plugins = [...config.plugins, ...pluginsDev];
+            // config.plugins = [...config.plugins, ...pluginsDev];
         }
     },
     // webpack-dev-server 相关配置 https://webpack.js.org/configuration/dev-server/
