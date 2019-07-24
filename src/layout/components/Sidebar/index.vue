@@ -2,42 +2,31 @@
   <div>
     <logo :collapse="isCollapse" />
     <el-scrollbar wrap-class="scrollbar-wrapper">
-      <el-menu 
-      :default-active="activeMenu" 
-      :collapse="isCollapse"
-      :background-color="variables.menuBg" 
-      :text-color="variables.menuText" 
-      :unique-opened="true" 
-      :active-text-color="variables.menuActiveText" 
-      :collapse-transition="false" 
-      mode="vertical"
-      >
+      <el-menu :default-active="activeMenu" :collapse="isCollapse" :background-color="variables.menuBg" :text-color="variables.menuText" :unique-opened="true" :active-text-color="variables.menuActiveText" :collapse-transition="false" mode="vertical">
         <template v-for="(item,index) in routes" v-if="!item.hidden">
           <div v-if="item.path=='/'">
-            <router-link  :to="item.path" :key="item.children[0].name">
+            <router-link :to="item.path" :key="item.children[0].name">
               <el-menu-item class="submenu-title-noDropdown" :index="item.path+'/'+item.children[0].path">
                 <i :class="item.children[0].meta.icon"></i>
                 <span slot="title" v-if="item.children[0].meta&&item.children[0].meta.title">{{item.children[0].meta.title}}</span>
               </el-menu-item>
             </router-link>
           </div>
-          <div v-else-if="item.children.length===1 && !item.children[0].children">
-            <router-link  :to="item.path+'/'+item.children[0].path" :key="item.children[0].name">
+          <div v-else-if="item.children.length===1 && !item.children[0].children&&!item.alwaysShow">
+            <router-link :to="item.path+'/'+item.children[0].path" :key="item.children[0].name">
               <el-menu-item class="submenu-title-noDropdown" :index="item.path+'/'+item.children[0].path">
                 <i :class="item.children[0].meta.icon"></i>
                 <span slot="title" v-if="item.children[0].meta&&item.children[0].meta.title">{{item.children[0].meta.title}}</span>
               </el-menu-item>
             </router-link>
           </div>
-          
+
           <el-submenu v-else ref="subMenu" :index="item.name||item.path" :key="item.name" popper-append-to-body>
             <template slot="title">
               <i :class="item.meta.icon"></i>
               <span slot="title">{{item.meta.title}}</span>
             </template>
             <template v-for="child in item.children" v-if="!child.hidden">
-              <!-- <sidebar-item :is-nest="true" class="nest-menu" v-if="child.children&&child.children.length>0" :routes="[child]" :key="child.path">
-              </sidebar-item> -->
               <router-link :to="item.path+'/'+child.path" :key="child.name">
                 <el-menu-item :index="item.path+'/'+child.path">
                   <i :class="child.meta.icon"></i>
@@ -71,6 +60,7 @@ export default {
   computed: {
     ...mapGetters(["sidebar"]),
     routes() {
+      console.log("this.$router.options.routes :", this.$router.options.routes);
       return this.$router.options.routes;
     },
     activeMenu() {

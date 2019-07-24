@@ -28,14 +28,16 @@ export const constantRoutes = [
     }]
   },
   {
-    path: '/element',
+    path: '/elements',
     component: Layout,
-    redirect: '/element',
+    redirect: '/elements/element',
+    alwaysShow: true,
+    meta: { title: 'Element', icon: 'el-icon-my-element' },
     children: [{
       path: 'element',
-      name: 'Element',
+      name: 'element',
       component: () => import('@/views/element/index'),
-      meta: { title: 'Element组件', icon: 'el-icon-my-element' }
+      meta: { title: 'Element组件' }
     }]
   },
   {
